@@ -93,7 +93,7 @@ export default function Profile() {
         <div className="divide-y divide-gray-50 rounded-2xl border border-gray-100">
           {menu.map(({ to, label, icon: Icon }) => (
             <Link key={label} to={to} className="flex items-center gap-3 px-4 py-3.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
+              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-cyan-500 text-gray-100">
                 <Icon size={17} />
               </span>
               <span className="flex-1 text-sm font-medium text-gray-800">{label}</span>
