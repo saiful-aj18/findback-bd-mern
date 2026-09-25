@@ -109,7 +109,7 @@ export default function Login() {
       <button
         type="button"
         onClick={() => setError("Google sign-in isn't wired up in this build yet.")}
-        className="flex w-full items-center justify-center gap-2 rounded-2xl border border-gray-200 py-3.5 text-[15px] font-semibold text-gray-700"
+        className="flex w-full items-center justify-center gap-2 rounded-2xl border border-gray-200 py-3.5 text-[15px] font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
       >
         <svg width="18" height="18" viewBox="0 0 18 18">
           <path fill="#4285F4" d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84a4.14 4.14 0 01-1.8 2.72v2.26h2.9c1.7-1.56 2.7-3.87 2.7-6.62z" />
@@ -120,11 +120,7 @@ export default function Login() {
         Continue with Google
       </button>
 
-      <p className="mt-8 text-center text-xs text-gray-500">
-        Demo tip: run <code className="text-gray-700">npm run seed</code> in the backend, then log in
-        with <span className="font-semibold text-gray-700">rifat@example.com</span> /{" "}
-        <span className="font-semibold text-gray-700">password123</span>
-      </p>
+      
     </div>
   );
 }
