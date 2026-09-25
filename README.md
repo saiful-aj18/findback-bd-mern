@@ -8,11 +8,7 @@ FindBack BD is a full-stack web application that connects people who have lost i
 
 ## 🌐 Live Demo
 
-### Frontend
 https://findbackbd73.vercel.app/
-
-### Backend API
-https://findback-bd-mern.onrender.com/api/health
 
 ---
 
