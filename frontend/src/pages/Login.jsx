@@ -120,6 +120,13 @@ export default function Login() {
         Continue with Google
       </button>
 
+      <p>
+
+        
+      </p>
+
+
+
       
     </div>
   );
