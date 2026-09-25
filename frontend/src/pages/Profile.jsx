@@ -54,10 +54,8 @@ export default function Profile() {
 
   return (
     <AppLayout>
-      <TopBar title="Profile"
-      className="text-teal-600 font-bold text-lg"
-       />
-
+      <TopBar title="Profile" back/>  
+      
       <div className="flex flex-col items-center px-5 py-6">
         <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-brand-100 text-2xl font-bold text-brand-700">
           {user?.avatar ? (

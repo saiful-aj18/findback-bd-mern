@@ -39,7 +39,9 @@ export default function Home() {
           <div className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-700 text-white">
             <MapPin size={16} />
           </div>
+          <Link to="/home" >
           <h1 className="text-[17px] font-bold text-gray-900">FindBack BD</h1>
+          </Link>
         </div>
         <Link
           to="/notifications"

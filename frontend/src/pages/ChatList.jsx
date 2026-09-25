@@ -46,7 +46,7 @@ export default function ChatList() {
 
   return (
     <AppLayout>
-      <TopBar title="Chat" />
+      <TopBar title="Chat" back />
 
       <div className="px-5 py-3">
         {loading && (
