@@ -34,7 +34,7 @@ export default function Sidebar() {
             to={to}
             className={({ isActive }) =>
               `flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors ${
-                isActive ? "bg-brand-50 text-brand-700" : "text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                isActive ? "bg-brand-50 text-brand-700" : "text-gray-500 hover:bg-teal-100 hover:text-gray-700"
               }`
             }
           >
@@ -47,7 +47,7 @@ export default function Sidebar() {
             to="/admin"
             className={({ isActive }) =>
               `flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors ${
-                isActive ? "bg-brand-50 text-brand-700" : "text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                isActive ? "bg-brand-50 text-brand-700" : "text-gray-500 hover:bg-teal-100 hover:text-gray-700"
               }`
             }
           >

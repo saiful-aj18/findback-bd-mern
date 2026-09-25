@@ -54,7 +54,9 @@ export default function Profile() {
 
   return (
     <AppLayout>
-      <TopBar title="Profile" />
+      <TopBar title="Profile"
+      className="text-teal-600 font-bold text-lg"
+       />
 
       <div className="flex flex-col items-center px-5 py-6">
         <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-brand-100 text-2xl font-bold text-brand-700">
@@ -69,17 +71,17 @@ export default function Profile() {
 
         <div className="mt-5 flex w-full max-w-xs items-center justify-around rounded-2xl border border-gray-100 py-4">
           <div className="text-center">
-            <p className="text-base font-extrabold text-gray-900">{stats.reports}</p>
+            <p className="text-base font-extrabold text-teal-800">{stats.reports}</p>
             <p className="text-[11px] text-gray-400">Reports</p>
           </div>
           <div className="h-8 w-px bg-gray-100" />
           <div className="text-center">
-            <p className="text-base font-extrabold text-gray-900">{stats.matches}</p>
+            <p className="text-base font-extrabold text-teal-800">{stats.matches}</p>
             <p className="text-[11px] text-gray-400">Matches</p>
           </div>
           <div className="h-8 w-px bg-gray-100" />
           <div className="text-center">
-            <p className="text-base font-extrabold text-gray-900">
+            <p className="text-base font-extrabold text-teal-700">
               {stats.rating ? stats.rating.toFixed(1) : "—"}
             </p>
             <p className="text-[11px] text-gray-400">Rating</p>
@@ -102,7 +104,7 @@ export default function Profile() {
 
         <button
           onClick={onLogout}
-          className="mt-5 flex w-full items-center justify-center gap-2 rounded-2xl border border-rose-200 py-3 text-sm font-semibold text-rose-600"
+          className="mt-5 flex w-full items-center justify-center gap-2 rounded-2xl border border-rose-200 py-3 text-sm font-semibold text-rose-600 hover:bg-rose-50 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2"
         >
           <LogOut size={16} />
           Log Out
