@@ -1,3 +1,4 @@
+import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Splash from "./pages/Splash";
 import Onboarding from "./pages/Onboarding";
@@ -13,6 +14,7 @@ import ChatThread from "./pages/ChatThread";
 import Notifications from "./pages/Notifications";
 import Profile from "./pages/Profile";
 import AdminPanel from "./pages/AdminPanel";
+import Settings from "./pages/Settings";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 export default function App() {
@@ -96,12 +98,43 @@ export default function App() {
           </ProtectedRoute>
         }
       />
-      {/* Planned for the next build phase */}
       <Route
         path="/settings"
         element={
           <ProtectedRoute>
-            <ComingSoon title="Settings" showLogout />
+            <Settings />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/settings/password"
+        element={
+          <ProtectedRoute>
+            <ComingSoon title="Change Password" />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/settings/language"
+        element={
+          <ProtectedRoute>
+            <ComingSoon title="Language" note="Only English is available for now." />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/settings/help"
+        element={
+          <ProtectedRoute>
+            <ComingSoon title="Help & Support" />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/settings/about"
+        element={
+          <ProtectedRoute>
+            <ComingSoon title="About FindBack BD" note="Lost & Found, Together — helping communities across Bangladesh reunite with what they've lost." />
           </ProtectedRoute>
         }
       />

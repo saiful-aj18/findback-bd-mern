@@ -54,32 +54,32 @@ export default function Profile() {
 
   return (
     <AppLayout>
-      <TopBar title="Profile" back/>  
-      
+      <TopBar title="Profile" back />
+
       <div className="flex flex-col items-center px-5 py-6">
-        <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-brand-100 text-2xl font-bold text-brand-700">
+        <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-brand-100 text-2xl font-bold text-cyan-700">
           {user?.avatar ? (
             <img src={user.avatar} alt="" className="h-full w-full object-cover" />
           ) : (
             user?.fullName?.[0]?.toUpperCase() || "U"
           )}
         </div>
-        <h1 className="mt-3 text-lg font-extrabold text-gray-900">{user?.fullName}</h1>
+        <h1 className="mt-3 text-lg font-extrabold text-cyan-500 ">{user?.fullName}</h1>
         <p className="text-sm text-gray-400">{user?.email}</p>
 
         <div className="mt-5 flex w-full max-w-xs items-center justify-around rounded-2xl border border-gray-100 py-4">
           <div className="text-center">
-            <p className="text-base font-extrabold text-teal-800">{stats.reports}</p>
+            <p className="text-base font-extrabold text-cyan-500">{stats.reports}</p>
             <p className="text-[11px] text-gray-400">Reports</p>
           </div>
           <div className="h-8 w-px bg-gray-100" />
           <div className="text-center">
-            <p className="text-base font-extrabold text-teal-800">{stats.matches}</p>
+            <p className="text-base font-extrabold text-cyan-500">{stats.matches}</p>
             <p className="text-[11px] text-gray-400">Matches</p>
           </div>
           <div className="h-8 w-px bg-gray-100" />
           <div className="text-center">
-            <p className="text-base font-extrabold text-teal-700">
+            <p className="text-base font-extrabold text-cyan-400">
               {stats.rating ? stats.rating.toFixed(1) : "—"}
             </p>
             <p className="text-[11px] text-gray-400">Rating</p>

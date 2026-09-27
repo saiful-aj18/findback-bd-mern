@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { Home, Search, PlusCircle, MessageCircle, User, Bell, Settings, MapPin, ShieldCheck } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
+import ThemeToggle from "./ThemeToggle";
 
 const tabs = [
   { to: "/home", label: "Home", icon: Home },
@@ -16,15 +17,16 @@ const tabs = [
 export default function Sidebar() {
   const { user } = useAuth();
   return (
-    <aside className="sticky top-0 hidden h-screen w-64 shrink-0 flex-col border-r border-gray-100 bg-white lg:flex">
+    <aside className="sticky top-0 hidden h-screen w-64 shrink-0 flex-col border-r border-gray-100 bg-white md:flex">
       <div className="flex items-center gap-2 px-6 py-6">
         <div className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 text-white">
           <MapPin size={18} />
         </div>
-        <div>
-          <p className="text-sm font-extrabold leading-none text-brand-800">FindBack BD</p>
-          <p className="text-[11px] text-gray-400">Lost &amp; Found, Together</p>
+        <div className="min-w-0 flex-1">
+          <p className="truncate text-sm font-extrabold leading-none text-brand-800">FindBack BD</p>
+          <p className="truncate text-[11px] text-gray-400">Lost &amp; Found, Together</p>
         </div>
+        <ThemeToggle compact />
       </div>
 
       <nav className="flex-1 space-y-1 px-3">

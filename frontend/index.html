@@ -11,6 +11,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script>
+      // Apply the saved theme before React mounts, so there's no flash of the
+      // wrong theme on load.
+      (function () {
+        try {
+          var saved = localStorage.getItem("fbbd_theme");
+          var dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (dark) document.documentElement.classList.add("dark");
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

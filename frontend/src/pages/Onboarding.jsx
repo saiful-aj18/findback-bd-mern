@@ -1,3 +1,4 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Backpack, MapPinned, Camera } from "lucide-react";
 
