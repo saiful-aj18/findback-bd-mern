@@ -4,11 +4,24 @@ import BottomNav from "./BottomNav";
 
 export default function AppLayout({ children, noPadBottom = false }) {
   return (
-    <div className="mx-auto flex min-h-screen w-full max-w-[1200px] bg-white md:shadow-card">
+    <div className="flex min-h-screen w-full bg-white">
+      {/* Desktop Sidebar */}
       <Sidebar />
-      <div className="app-shell flex-1 md:max-w-none md:shadow-none">
-        <main className={noPadBottom ? "" : "pb-20 md:pb-6"}>{children}</main>
+
+      {/* Main Content */}
+      <div className="app-shell flex min-w-0 flex-1 md:max-w-none md:shadow-none">
+        <main
+          className={
+            noPadBottom
+              ? "w-full"
+              : "w-full pb-20 md:pb-6"
+          }
+        >
+          {children}
+        </main>
       </div>
+
+      {/* Mobile Bottom Navigation */}
       <BottomNav />
     </div>
   );
